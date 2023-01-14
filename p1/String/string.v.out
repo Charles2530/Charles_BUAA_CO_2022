@@ -1,0 +1,102 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01051680 .scope module, "string" "string" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "clr"
+    .port_info 2 /INPUT 8 "in"
+    .port_info 3 /OUTPUT 1 "out"
+P_0105b928 .param/l "s0" 0 2 5, +C4<00000000000000000000000000000000>;
+P_0105b948 .param/l "s1" 0 2 5, +C4<00000000000000000000000000000001>;
+P_0105b968 .param/l "s2" 0 2 5, +C4<00000000000000000000000000000010>;
+P_0105b988 .param/l "s3" 0 2 5, +C4<00000000000000000000000000000011>;
+L_01059b90 .functor AND 1, L_02b927b0, L_02b92440, C4<1>, C4<1>;
+L_02b92910 .functor BUFT 1, C4<00110000>, C4<0>, C4<0>, C4<0>;
+v01052198_0 .net/2u *"_s0", 7 0, L_02b92910;  1 drivers
+v01052450_0 .net *"_s2", 0 0, L_02b927b0;  1 drivers
+L_02b92938 .functor BUFT 1, C4<00111001>, C4<0>, C4<0>, C4<0>;
+v01059940_0 .net/2u *"_s4", 7 0, L_02b92938;  1 drivers
+v02b92390_0 .net *"_s6", 0 0, L_02b92440;  1 drivers
+o02b61cd4 .functor BUFZ 1, C4<z>; HiZ drive
+v02b92128_0 .net "clk", 0 0, o02b61cd4;  0 drivers
+o02b61cec .functor BUFZ 1, C4<z>; HiZ drive
+v02b92498_0 .net "clr", 0 0, o02b61cec;  0 drivers
+o02b61d04 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v02b92288_0 .net "in", 7 0, o02b61d04;  0 drivers
+v02b924f0_0 .net "is_digit", 0 0, L_01059b90;  1 drivers
+v02b925a0_0 .var "next", 3 0;
+v02b92700_0 .net "out", 0 0, L_02b92860;  1 drivers
+v02b922e0_0 .var "state", 3 0;
+E_0105ac38 .event posedge, v02b92498_0, v02b92128_0;
+E_0105acb0 .event edge, v02b922e0_0, v02b924f0_0;
+L_02b927b0 .cmp/ge 8, o02b61d04, L_02b92910;
+L_02b92440 .cmp/ge 8, L_02b92938, o02b61d04;
+L_02b92860 .part v02b922e0_0, 1, 1;
+    .scope S_01051680;
+T_0 ;
+    %wait E_0105acb0;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 4, 0, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v02b925a0_0, 4, 1;
+    %load/vec4 v02b922e0_0;
+    %parti/s 1, 0, 2;
+    %load/vec4 v02b924f0_0;
+    %and;
+    %load/vec4 v02b922e0_0;
+    %parti/s 1, 2, 3;
+    %load/vec4 v02b924f0_0;
+    %and;
+    %or;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v02b925a0_0, 4, 1;
+    %load/vec4 v02b922e0_0;
+    %parti/s 1, 1, 2;
+    %load/vec4 v02b924f0_0;
+    %nor/r;
+    %and;
+    %ix/load 4, 2, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v02b925a0_0, 4, 1;
+    %load/vec4 v02b922e0_0;
+    %parti/s 1, 1, 2;
+    %load/vec4 v02b924f0_0;
+    %and;
+    %load/vec4 v02b922e0_0;
+    %parti/s 1, 2, 3;
+    %load/vec4 v02b924f0_0;
+    %nor/r;
+    %and;
+    %or;
+    %ix/load 4, 3, 0;
+    %flag_set/imm 4, 0;
+    %store/vec4 v02b925a0_0, 4, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_01051680;
+T_1 ;
+    %wait E_0105ac38;
+    %load/vec4 v02b92498_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 1, 0, 4;
+    %assign/vec4 v02b922e0_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v02b925a0_0;
+    %assign/vec4 v02b922e0_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "string.v";

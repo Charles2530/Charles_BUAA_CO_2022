@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj mips -o D:/coding_file/study/Lesson/co_lesson/lesson/p8/mips/UART.tfi -lib work D:/coding_file/study/Lesson/co_lesson/lesson/p8/mips//UART.v -module UART -template D:/SoftWare/ISE/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

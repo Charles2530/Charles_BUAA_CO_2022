@@ -1,0 +1,28 @@
+Command line:
+   mips_txt_isim_map.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3942
+
+Tue Dec 20 19:13:16 2022
+
+
+ Elaboration Time: 5.71875 sec
+
+ Current Memory Usage: 6509.68 Meg
+
+ Total Signals          : 226814
+ Total Nets             : 163852
+ Total Signal Drivers   : 154494
+ Total Blocks           : 21985
+ Total Primitive Blocks : 11446
+ Total Processes        : 204845
+ Total Traceable Variables  : 77001
+ Total Scalar Nets and Variables : 2863977
+
+ Total Simulation Time: 16.1719 sec
+
+ Current Memory Usage: 5557.9 Meg
+
+Tue Dec 20 19:16:30 2022
+

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/coding_file/study/Lesson/co_lesson/lesson/p8/mips/src/cpu.v -lang verilog -prj mips -o cpu.spl -module cpu -template D:/SoftWare/ISE/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 cpu.spl D:/coding_file/study/Lesson/co_lesson/lesson/p8/mips/cpu.sym 

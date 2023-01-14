@@ -1,0 +1,38 @@
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+                  38@00003000: $27 <= 00000496
+                  42@00003004: $26 <= 00006df7
+                  46@00003008: $27 <= 00006ff7
+                  50@0000300c: $26 <= 00007ff7
+                  54@00003010: $26 <= 00006fff
+                  58@00003014: $27 <= 00007ff7
+                  62@00003018: $26 <= 00007a14
+                  66@0000301c: $26 <= 00007ff7
+                  70@00003020: $27 <= 00007fff
+                  74@00003024: $25 <= 00007fff
+                  78@00003028: $26 <= 00007fff
+                  82@0000302c: $27 <= 00007fff
+                  90@00003034: $26 <= 005a0000
+                 114@00003038: $25 <= 3fff0001
+                 118@0000303c: $31 <= 00003044
+                 126@000034f0: *00000000 <= 00000100
+                 134@000034f4: $31 <= 00700000
+                 138@000034f8: $26 <= 004f0000
+                 138@000034fc: *00000000 <= 00010100
+                 146@00003500: $26 <= 3fff0011
+                 146@00003504: *00000004 <= 00110000
+                 154@0000350c: *00000004 <= 00110001
+                 158@00003510: *00000008 <= 3fff0011
+                 186@00003520: $26 <= 00000000
+                 190@00003524: $27 <= 00210000
+                 190@00003528: *00000000 <= 00000000
+                 198@0000352c: $27 <= 00000011
+                 198@00003530: *00000004 <= 00110001
+                 202@00003534: *00000000 <= 01000000
+                 210@00003538: $25 <= 00680000

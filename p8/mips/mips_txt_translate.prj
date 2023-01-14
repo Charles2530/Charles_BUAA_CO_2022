@@ -1,0 +1,2 @@
+verilog work "netgen/translate/fpga_top_translate.v"
+verilog work "mips_tb.v"

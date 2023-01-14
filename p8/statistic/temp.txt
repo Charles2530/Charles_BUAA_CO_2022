@@ -1,0 +1,205 @@
+.text
+#interrupt  enable
+ori	$at, 0xfff1
+mtc0	$at, $12
+#Address
+li $s0,0x7f00 #counter
+li $s1,0x7f30 #UART
+li $s2,0x7f50 #TUBE
+li $s3,0x7f60 #SWITCH
+li $s4,0x7f68 #KEY
+li $s5,0x7f70 #LED
+#Constant
+li $t8,2604 #Baudbits
+li $t7,0xb  #Timer_mode1
+#li $t6,25000000 #per second
+li $t6,50 #per second
+#judge_Mode
+FPGA_begin:
+lw $t1,0($s4)
+move $t2,$t1
+andi $t2,0x0001
+li $t3,1 #counter_mode
+beq $t2,$t3,Counter_Mode
+nop
+Calculate_Mode:
+    lw	$t1, 4($s3)
+    lw	$t2, 0($s3)
+    lbu	$t0, 0($s4)
+    andi $t0, 0xfffc
+    
+    switch:
+        op_1:
+        li	$t3, 4
+        bne	$t0, $t3, op_2
+        nop
+        add	$t4, $t1, $t2
+        j	switch_end
+		    nop
+        
+        op_2:
+        li	$t3, 8
+        bne	$t0, $t3, op_3
+        nop
+        sub	$t4, $t1, $t2
+        j	switch_end
+		    nop
+        
+        op_3:
+        li	$t3, 16
+        bne	$t0, $t3, op_4
+        nop
+        mult $t1, $t2
+        mflo $t4
+        j	switch_end
+		    nop
+        
+        op_4:
+        li	$t3, 32
+        bne	$t0, $t3, op_5
+        nop
+        div  $t1, $t2
+        mflo $t4
+        j	switch_end
+		    nop
+        
+        op_5:
+        li	$t3, 64
+        bne	$t0, $t3, op_6
+        nop
+        and	$t4, $t1, $t2
+        j	switch_end
+		    nop
+        
+        op_6:
+        li	$t3, 128
+        bne	$t0, $t3, switch_end
+        nop
+        or	$t4, $t1, $t2
+        
+
+    switch_end:
+        jal Display_sel
+        nop
+        j	FPGA_begin
+        nop
+
+
+#t2,t3,t4,t5,t8
+Display_sel:
+    lw $t2,0($s4)
+    andi $t2,0x0002
+    li $t3,2 #counter_mode
+    beq $t2,$t3,UART_display
+    nop
+    Tube_display:
+    sw	$t4, 0($s2) #use $t4 to display
+	sw  $t4, 0($s5)
+    jr $ra
+    nop
+    UART_display:
+    sw $t8,8($s1)
+    sw $t8,12($s1)
+    srl $t5,$t4,24
+    sb $t5,0($s1)#
+    srl $t5,$t4,16
+    sb $t5,0($s1)
+    srl $t5,$t4,8
+    sb $t5,0($s1)
+    sb $t4,0($s1)#
+    jr $ra
+    nop
+
+
+
+
+
+#t0,t1,t2,t3,t4,t5
+Counter_Mode:
+# t0 is input-value
+# t1 is max-value
+# t4 is value counter
+
+#mode judge
+    lw $t3,0($s4)
+    andi $t2,$t3,0x0004
+    li $t5,4
+    beq $t5,$t2,in_order
+    nop
+
+not_order:
+	sw $0,0($s0)
+	lw	$t0, 0($s3)
+	li $t4,0
+	sw	$t4, 0($s2) #use $t4 to display
+	sw  $t4, 0($s5)
+	move $t1,$t0
+	sw	$t6, 4($s0)
+	sw	$t7, 0($s0)#mode1
+	j counter_loop1
+	nop
+
+counter_loop1: 
+	lw	$t0, 0($s3)
+  	#jal Display_sel
+  	#nop
+	beq	$t0, $t1, counter_loop1
+	nop
+	j FPGA_begin
+	nop
+
+
+
+in_order:
+	sw $0,0($s0)
+	lw	$t0, 0($s3)
+	move $t1,$t0
+	move $t4,$t0
+	sw	$t4, 0($s2) #use $t4 to display
+	sw  $t4, 0($s5)
+	sw	$t6, 4($s0)
+	sw	$t7, 0($s0)#mode1
+	j counter_loop2
+	nop
+	
+counter_loop2: 
+	lw	$t0, 0($s3)
+  	#jal Display_sel
+  	#nop
+	beq	$t0, $t1, counter_loop2
+	nop
+	j FPGA_begin
+	nop
+	
+#t0,t4		
+.ktext 0x4180
+ 	mfc0 $k0,$13
+	andi $k0,0x400
+ 	li $k1,0x400
+ 	bne $k0,$k1,interrupt
+	nop
+timer_inter:
+ 	lw $k0,0($s4)
+    andi $k1,$k0,0x0004
+    li $k0,4
+	bne $k0,$k1,add_part
+	nop
+	sub_part:
+ 	beq $t4, $0, end
+ 	nop
+ 	addi $t4, $t4, -1
+ 	j end
+ 	nop
+	add_part:
+	beq $t4, $t0, end
+ 	nop
+	addi	 $t4, $t4, 1
+ 	end:
+ 	jal Display_sel
+ 	nop
+	eret
+	
+interrupt:
+	lw 	$k0, 0($s1)
+	sw 	$k0, 0($s1)
+	eret 

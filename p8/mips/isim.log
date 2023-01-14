@@ -1,0 +1,82 @@
+ISim log file
+Running: D:\coding_file\study\Lesson\co_lesson\lesson\p8\mips\mips_txt_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/coding_file/study/Lesson/co_lesson/lesson/p8/mips/mips_txt_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module mips_txt.fpga.im.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module mips_txt.fpga.dm.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Finished circuit initialization process.
+                 118@00003000: $ 1 <= 0000fff1
+                 126@00003008: $16 <= 00007f00
+                 130@0000300c: $17 <= 00007f30
+                 134@00003010: $18 <= 00007f50
+                 138@00003014: $19 <= 00007f60
+                 142@00003018: $20 <= 00007f68
+                 146@0000301c: $21 <= 00007f70
+                 150@00003020: $ 1 <= 21370000
+                 154@00003024: $22 <= 21373191
+                 158@00003028: $ 1 <= 00980000
+                 162@0000302c: $14 <= 00989680
+                 166@00003030: $ 8 <= 00000004
+                 170@00003034: $ 9 <= 00000001
+                 174@00003038: $10 <= 00000002
+                 182@0000303c: $13 <= 00000002
+                 198@00003048: $11 <= 00000004
+                 214@00003054: $12 <= 00000003
+                 230@000030b4: $ 2 <= 00000000
+                 234@000030b8: $ 2 <= 00000001
+                 250@000030b8: $ 2 <= 00000002
+                 266@000030b8: $ 2 <= 00000003
+                 282@000030b8: $ 2 <= 00000004
+                 298@000030b8: $ 2 <= 00000005
+                 314@000030b8: $ 2 <= 00000006
+                 330@000030b8: $ 2 <= 00000007
+                 346@000030b8: $ 2 <= 00000008
+                 362@000030b8: $ 2 <= 00000009
+                 378@000030b8: $ 2 <= 0000000a
+                 394@000030b8: $ 2 <= 0000000b
+                 410@000030b8: $ 2 <= 0000000c
+                 426@000030b8: $ 2 <= 0000000d
+                 442@000030b8: $ 2 <= 0000000e
+                 458@000030b8: $ 2 <= 0000000f
+                 474@000030b8: $ 2 <= 00000010
+                 490@000030b8: $ 2 <= 00000011
+                 506@000030b8: $ 2 <= 00000012
+                 522@000030b8: $ 2 <= 00000013
+                 538@000030b8: $ 2 <= 00000014
+                 554@000030b8: $ 2 <= 00000015
+                 570@000030b8: $ 2 <= 00000016
+                 586@000030b8: $ 2 <= 00000017
+                 602@000030b8: $ 2 <= 00000018
+                 618@000030b8: $ 2 <= 00000019
+                 634@000030b8: $ 2 <= 0000001a
+                 650@000030b8: $ 2 <= 0000001b
+                 666@000030b8: $ 2 <= 0000001c
+                 682@000030b8: $ 2 <= 0000001d
+                 698@000030b8: $ 2 <= 0000001e
+                 714@000030b8: $ 2 <= 0000001f
+                 730@000030b8: $ 2 <= 00000020
+                 746@000030b8: $ 2 <= 00000021
+                 762@000030b8: $ 2 <= 00000022
+                 778@000030b8: $ 2 <= 00000023
+                 794@000030b8: $ 2 <= 00000024
+                 810@000030b8: $ 2 <= 00000025
+                 826@000030b8: $ 2 <= 00000026
+                 842@000030b8: $ 2 <= 00000027
+                 858@000030b8: $ 2 <= 00000028
+                 874@000030b8: $ 2 <= 00000029
+                 890@000030b8: $ 2 <= 0000002a
+                 906@000030b8: $ 2 <= 0000002b
+                 922@000030b8: $ 2 <= 0000002c
+                 938@000030b8: $ 2 <= 0000002d
+                 954@000030b8: $ 2 <= 0000002e
+                 970@000030b8: $ 2 <= 0000002f
+                 986@000030b8: $ 2 <= 00000030

@@ -1,0 +1,67 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00951708 .scope module, "alu" "alu" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "A"
+    .port_info 1 /INPUT 32 "B"
+    .port_info 2 /INPUT 3 "ALUOp"
+    .port_info 3 /OUTPUT 32 "C"
+o02bc1ff4 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+o02bc2024 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+L_009517d8 .functor AND 32, o02bc1ff4, o02bc2024, C4<11111111111111111111111111111111>, C4<11111111111111111111111111111111>;
+L_00951820 .functor OR 32, o02bc1ff4, o02bc2024, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v0095cfb8_0 .net "A", 31 0, o02bc1ff4;  0 drivers
+o02bc200c .functor BUFZ 3, C4<zzz>; HiZ drive
+v0095c988_0 .net "ALUOp", 2 0, o02bc200c;  0 drivers
+v0095ce58_0 .net "B", 31 0, o02bc2024;  0 drivers
+v0095cb40_0 .net "C", 31 0, L_02bf37c0;  1 drivers
+L_02bf4488 .functor BUFT 1, C4<001>, C4<0>, C4<0>, C4<0>;
+v0095cf60_0 .net/2u *"_s0", 2 0, L_02bf4488;  1 drivers
+v0095cca0_0 .net *"_s10", 31 0, L_02bf41b8;  1 drivers
+L_02bf44d8 .functor BUFT 1, C4<011>, C4<0>, C4<0>, C4<0>;
+v0095ceb0_0 .net/2u *"_s12", 2 0, L_02bf44d8;  1 drivers
+v0095cf08_0 .net *"_s14", 0 0, L_02bf4160;  1 drivers
+v0095c9e0_0 .net *"_s16", 31 0, L_009517d8;  1 drivers
+L_02bf4500 .functor BUFT 1, C4<100>, C4<0>, C4<0>, C4<0>;
+v0095d010_0 .net/2u *"_s18", 2 0, L_02bf4500;  1 drivers
+v0095d068_0 .net *"_s2", 0 0, L_02bf4058;  1 drivers
+v0095c930_0 .net *"_s20", 0 0, L_02bf4210;  1 drivers
+v0095ca38_0 .net *"_s22", 31 0, L_00951820;  1 drivers
+L_02bf4528 .functor BUFT 1, C4<101>, C4<0>, C4<0>, C4<0>;
+v0095ca90_0 .net/2u *"_s24", 2 0, L_02bf4528;  1 drivers
+v0095cae8_0 .net *"_s26", 0 0, L_02bf42c0;  1 drivers
+v0095cbf0_0 .net *"_s28", 31 0, L_02bf4268;  1 drivers
+v0095cd50_0 .net *"_s30", 31 0, L_02bf4318;  1 drivers
+v0095cb98_0 .net *"_s32", 31 0, L_02bf3a80;  1 drivers
+v0095ce00_0 .net *"_s34", 31 0, L_02bf3d98;  1 drivers
+v02bf4370_0 .net *"_s36", 31 0, L_02bf3870;  1 drivers
+v02bf43c8_0 .net *"_s38", 31 0, L_02bf3b30;  1 drivers
+v02bf3fa8_0 .net *"_s4", 31 0, L_02bf40b0;  1 drivers
+L_02bf44b0 .functor BUFT 1, C4<010>, C4<0>, C4<0>, C4<0>;
+v02bf4000_0 .net/2u *"_s6", 2 0, L_02bf44b0;  1 drivers
+v02bf4420_0 .net *"_s8", 0 0, L_02bf4108;  1 drivers
+L_02bf4058 .cmp/eq 3, o02bc200c, L_02bf4488;
+L_02bf40b0 .arith/sum 32, o02bc1ff4, o02bc2024;
+L_02bf4108 .cmp/eq 3, o02bc200c, L_02bf44b0;
+L_02bf41b8 .arith/sub 32, o02bc1ff4, o02bc2024;
+L_02bf4160 .cmp/eq 3, o02bc200c, L_02bf44d8;
+L_02bf4210 .cmp/eq 3, o02bc200c, L_02bf4500;
+L_02bf42c0 .cmp/eq 3, o02bc200c, L_02bf4528;
+L_02bf4268 .shift/r 32, o02bc1ff4, o02bc2024;
+L_02bf4318 .shift/rs 32, o02bc1ff4, o02bc2024;
+L_02bf3a80 .functor MUXZ 32, L_02bf4318, L_02bf4268, L_02bf42c0, C4<>;
+L_02bf3d98 .functor MUXZ 32, L_02bf3a80, L_00951820, L_02bf4210, C4<>;
+L_02bf3870 .functor MUXZ 32, L_02bf3d98, L_009517d8, L_02bf4160, C4<>;
+L_02bf3b30 .functor MUXZ 32, L_02bf3870, L_02bf41b8, L_02bf4108, C4<>;
+L_02bf37c0 .functor MUXZ 32, L_02bf3b30, L_02bf40b0, L_02bf4058, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "alu.v";

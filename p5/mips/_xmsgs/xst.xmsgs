@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\MD_Unit.v" Line 3: Empty module &lt;<arg fmt="%s" index="1">MD_Unit</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 158: Assignment to <arg fmt="%s" index="1">HI</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 159: Assignment to <arg fmt="%s" index="1">LO</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 160: Assignment to <arg fmt="%s" index="1">mdu_out</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 161: Assignment to <arg fmt="%s" index="1">busy</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="error" file="HDLCompiler" num="487" delta="new" >Illegal hexadecimal number
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\IM.v" Line 2: Empty module &lt;<arg fmt="%s" index="1">IM</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\ALU_change.v" Line 11: Assignment to <arg fmt="%s" index="1">more</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\Controller.v" Line 121: Assignment to <arg fmt="%s" index="1">b_type</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\Controller.v" Line 122: Assignment to <arg fmt="%s" index="1">j_type</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\ID.v" Line 89: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\EX.v" Line 66: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 7: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 8: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 9: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 10: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\MEM.v" Line 54: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 420: Assignment to <arg fmt="%s" index="1">w_RegDst</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 150: Net &lt;<arg fmt="%s" index="1">mdu_en</arg>&gt; does not have a driver.
+</msg>
+
+</messages>
+

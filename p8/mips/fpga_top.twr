@@ -1,0 +1,832 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\SoftWare\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3
+-s 2 -n 3 -fastpaths -xml fpga_top.twx fpga_top.ncd -o fpga_top.twr
+fpga_top.pcf
+
+Design file:              fpga_top.ncd
+Physical constraint file: fpga_top.pcf
+Device,package,speed:     xc6slx100,fgg676,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+12 logic loops found and disabled.
+
+  ----------------------------------------------------------------------
+ ! Warning: The following connections close logic loops, and some paths !
+ !          through these connections may not be analyzed. To better    !
+ !          understand the logic associated with these loops, run a     !
+ !          Analyze Against User-Defined End-Point Analysis inside      !
+ !          Timing Analyzer (timingan) with the listed signal as a      !
+ !          source NET (*signal_name). The Timing Report will display   !
+ !          all the paths associated with this signal and the logic     !
+ !          loop will be reported.                                      !
+ !                                                                      !
+ ! Signal                            Driver            Load             !
+ ! --------------------------------  ----------------  ---------------- !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X31Y84.B6  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X31Y81.B6  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X45Y99.A1  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X45Y84.A1  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X45Y84.D3  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X31Y84.A1  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X45Y84.B1  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X31Y81.C4  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X34Y84.B6  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X31Y82.A1  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X31Y82.C1  !
+ ! cpu/F_error_range                 SLICE_X33Y97.A    SLICE_X34Y84.D4  !
+  ---------------------------------------------------------------------- 
+
+
+================================================================================
+Timing constraint: TS_clk_in = PERIOD TIMEGRP "clk_in" 40 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 7486894382896 paths analyzed, 12445 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  36.861ns.
+--------------------------------------------------------------------------------
+
+Paths for end point cpu/mdu/MD_Unit/MulUnit/tmp_39 (SLICE_X17Y129.D3), 122057640390 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_39 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.792ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.034ns (0.872 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_39
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT0   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN0    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_0
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P5       Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X17Y129.D3     net (fanout=1)        1.761   cpu/mdu/MD_Unit/MulUnit/sr<39>
+    SLICE_X17Y129.CLK    Tas                   0.373   cpu/mdu/MD_Unit/MulUnit/tmp<39>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT331
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_39
+    -------------------------------------------------  ---------------------------
+    Total                                     36.792ns (16.180ns logic, 20.612ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_39 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.792ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.034ns (0.872 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_39
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT9   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN9    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_9
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P5       Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X17Y129.D3     net (fanout=1)        1.761   cpu/mdu/MD_Unit/MulUnit/sr<39>
+    SLICE_X17Y129.CLK    Tas                   0.373   cpu/mdu/MD_Unit/MulUnit/tmp<39>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT331
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_39
+    -------------------------------------------------  ---------------------------
+    Total                                     36.792ns (16.180ns logic, 20.612ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_39 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.792ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.034ns (0.872 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_39
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT1   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN1    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_1
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P5       Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X17Y129.D3     net (fanout=1)        1.761   cpu/mdu/MD_Unit/MulUnit/sr<39>
+    SLICE_X17Y129.CLK    Tas                   0.373   cpu/mdu/MD_Unit/MulUnit/tmp<39>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT331
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_39
+    -------------------------------------------------  ---------------------------
+    Total                                     36.792ns (16.180ns logic, 20.612ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu/mdu/MD_Unit/MulUnit/tmp_51 (SLICE_X16Y133.D4), 122057640390 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.252ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_51 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.672ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.041ns (0.865 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_51
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT0   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN0    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_0
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P17      Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X16Y133.D4     net (fanout=1)        1.675   cpu/mdu/MD_Unit/MulUnit/sr<51>
+    SLICE_X16Y133.CLK    Tas                   0.339   cpu/mdu/MD_Unit/MulUnit/tmp<51>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT471
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_51
+    -------------------------------------------------  ---------------------------
+    Total                                     36.672ns (16.146ns logic, 20.526ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.252ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_51 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.672ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.041ns (0.865 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_51
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT9   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN9    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_9
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P17      Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X16Y133.D4     net (fanout=1)        1.675   cpu/mdu/MD_Unit/MulUnit/sr<51>
+    SLICE_X16Y133.CLK    Tas                   0.339   cpu/mdu/MD_Unit/MulUnit/tmp<51>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT471
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_51
+    -------------------------------------------------  ---------------------------
+    Total                                     36.672ns (16.146ns logic, 20.526ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.252ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_51 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.672ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.041ns (0.865 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_51
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT1   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN1    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_1
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P17      Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X16Y133.D4     net (fanout=1)        1.675   cpu/mdu/MD_Unit/MulUnit/sr<51>
+    SLICE_X16Y133.CLK    Tas                   0.339   cpu/mdu/MD_Unit/MulUnit/tmp<51>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT471
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_51
+    -------------------------------------------------  ---------------------------
+    Total                                     36.672ns (16.146ns logic, 20.526ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu/mdu/MD_Unit/MulUnit/tmp_37 (SLICE_X17Y129.B4), 122057640390 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.253ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_37 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.678ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.034ns (0.872 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_37
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT0   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN0    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_0
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P3       Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X17Y129.B4     net (fanout=1)        1.647   cpu/mdu/MD_Unit/MulUnit/sr<37>
+    SLICE_X17Y129.CLK    Tas                   0.373   cpu/mdu/MD_Unit/MulUnit/tmp<39>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT311
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_37
+    -------------------------------------------------  ---------------------------
+    Total                                     36.678ns (16.180ns logic, 20.498ns route)
+                                                       (44.1% logic, 55.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.253ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_37 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.678ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.034ns (0.872 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_37
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT9   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN9    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_9
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P3       Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X17Y129.B4     net (fanout=1)        1.647   cpu/mdu/MD_Unit/MulUnit/sr<37>
+    SLICE_X17Y129.CLK    Tas                   0.373   cpu/mdu/MD_Unit/MulUnit/tmp<39>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT311
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_37
+    -------------------------------------------------  ---------------------------
+    Total                                     36.678ns (16.180ns logic, 20.498ns route)
+                                                       (44.1% logic, 55.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.253ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cpu/E_reg/M_DM_type_2 (FF)
+  Destination:          cpu/mdu/MD_Unit/MulUnit/tmp_37 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      36.678ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.034ns (0.872 - 0.906)
+  Source Clock:         clk_in_BUFGP rising at 0.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cpu/E_reg/M_DM_type_2 to cpu/mdu/MD_Unit/MulUnit/tmp_37
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y114.CQ     Tcko                  0.430   cpu/E_reg/M_DM_type<3>
+                                                       cpu/E_reg/M_DM_type_2
+    SLICE_X40Y134.B1     net (fanout=8)        2.463   cpu/E_reg/M_DM_type<2>
+    SLICE_X40Y134.B      Tilo                  0.254   tube/tube_0_data_8
+                                                       cpu/is_DM31
+    SLICE_X33Y116.D2     net (fanout=14)       2.217   cpu/is_DM3
+    SLICE_X33Y116.D      Tilo                  0.259   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+                                                       cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A5     net (fanout=4)        1.705   cpu/Is_Align_Error_Save_Timer_OR_530_o121
+    SLICE_X21Y115.A      Tilo                  0.259   N501
+                                                       cpu/mux3712_SW0
+    SLICE_X32Y116.D3     net (fanout=1)        1.249   N19
+    SLICE_X32Y116.D      Tilo                  0.254   cpu/cp0/Cause_4
+                                                       cpu/mux3712
+    SLICE_X31Y113.B6     net (fanout=7)        1.029   cpu/m_ExcCode_fixed<2>
+    SLICE_X31Y113.B      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/Mmux_m_Wegrf11
+    SLICE_X31Y113.A5     net (fanout=14)       0.261   cpu/m_Wegrf
+    SLICE_X31Y113.A      Tilo                  0.259   cpu/M_reg/W_Wegrf
+                                                       cpu/hzu/Mmux_SelALU_B17_2
+    SLICE_X40Y118.C2     net (fanout=23)       1.833   cpu/hzu/Mmux_SelALU_B171
+    SLICE_X40Y118.C      Tilo                  0.255   cpu/E_reg/M_RD2<5>
+                                                       cpu/e_B_f<5>1
+    SLICE_X37Y115.B3     net (fanout=2)        0.832   cpu/e_B_f<5>
+    SLICE_X37Y115.B      Tilo                  0.259   cpu/e_B<0>1
+                                                       cpu/e_B<5>1
+    DSP48_X0Y30.B5       net (fanout=13)       4.405   cpu/e_B<5>
+    DSP48_X0Y30.P40      Tdspdo_B_P            4.384   cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr
+    DSP48_X0Y31.C23      net (fanout=1)        1.352   cpu/mdu/MD_Unit/MulUnit/Mmult_sr_P40_to_MulUnit/Mmult_sr1
+    DSP48_X0Y31.PCOUT1   Tdspdo_C_PCOUT        3.149   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr1
+    DSP48_X0Y32.PCIN1    net (fanout=1)        0.002   cpu/mdu/MD_Unit/MulUnit/Mmult_sr1_PCOUT_to_MulUnit/Mmult_sr2_PCIN_1
+    DSP48_X0Y32.P41      Tdspdo_PCIN_P         2.645   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr2
+    DSP48_X0Y33.C24      net (fanout=1)        1.503   cpu/mdu/MD_Unit/MulUnit/Mmult_sr2_P41_to_MulUnit/Mmult_sr3
+    DSP48_X0Y33.P3       Tdspdo_C_P            3.141   cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmult_sr3
+    SLICE_X17Y129.B4     net (fanout=1)        1.647   cpu/mdu/MD_Unit/MulUnit/sr<37>
+    SLICE_X17Y129.CLK    Tas                   0.373   cpu/mdu/MD_Unit/MulUnit/tmp<39>
+                                                       cpu/mdu/MD_Unit/MulUnit/Mmux_usr[63]_sr[63]_mux_4_OUT311
+                                                       cpu/mdu/MD_Unit/MulUnit/tmp_37
+    -------------------------------------------------  ---------------------------
+    Total                                     36.678ns (16.180ns logic, 20.498ns route)
+                                                       (44.1% logic, 55.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk_in = PERIOD TIMEGRP "clk_in" 40 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point cpu/F_reg/last_instr_reg_1 (SLICE_X34Y84.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.408ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cpu/F_reg/last_instr_reg_1 (FF)
+  Destination:          cpu/F_reg/last_instr_reg_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.408ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_in_BUFGP rising at 40.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cpu/F_reg/last_instr_reg_1 to cpu/F_reg/last_instr_reg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y84.DQ      Tcko                  0.200   cpu/F_reg/last_instr_reg<1>
+                                                       cpu/F_reg/last_instr_reg_1
+    SLICE_X34Y84.D6      net (fanout=1)        0.018   cpu/F_reg/last_instr_reg<1>
+    SLICE_X34Y84.CLK     Tah         (-Th)    -0.190   cpu/F_reg/last_instr_reg<1>
+                                                       cpu/F_reg/Mmux_D_Instr121
+                                                       cpu/F_reg/last_instr_reg_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.408ns (0.390ns logic, 0.018ns route)
+                                                       (95.6% logic, 4.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu/grf/RF_0_380 (SLICE_X6Y105.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.413ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cpu/grf/RF_0_380 (FF)
+  Destination:          cpu/grf/RF_0_380 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.413ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_in_BUFGP rising at 40.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cpu/grf/RF_0_380 to cpu/grf/RF_0_380
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y105.DQ      Tcko                  0.200   cpu/grf/RF_0<380>
+                                                       cpu/grf/RF_0_380
+    SLICE_X6Y105.D6      net (fanout=4)        0.023   cpu/grf/RF_0<380>
+    SLICE_X6Y105.CLK     Tah         (-Th)    -0.190   cpu/grf/RF_0<380>
+                                                       cpu/grf/RF[31][31]_RF[31][31]_mux_72_OUT<380>1
+                                                       cpu/grf/RF_0_380
+    -------------------------------------------------  ---------------------------
+    Total                                      0.413ns (0.390ns logic, 0.023ns route)
+                                                       (94.4% logic, 5.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cpu/grf/RF_0_667 (SLICE_X6Y106.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.413ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cpu/grf/RF_0_667 (FF)
+  Destination:          cpu/grf/RF_0_667 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.413ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_in_BUFGP rising at 40.000ns
+  Destination Clock:    clk_in_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cpu/grf/RF_0_667 to cpu/grf/RF_0_667
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y106.DQ      Tcko                  0.200   cpu/grf/RF_0<667>
+                                                       cpu/grf/RF_0_667
+    SLICE_X6Y106.D6      net (fanout=4)        0.023   cpu/grf/RF_0<667>
+    SLICE_X6Y106.CLK     Tah         (-Th)    -0.190   cpu/grf/RF_0<667>
+                                                       cpu/grf/RF[31][31]_RF[31][31]_mux_72_OUT<667>1
+                                                       cpu/grf/RF_0_667
+    -------------------------------------------------  ---------------------------
+    Total                                      0.413ns (0.390ns logic, 0.023ns route)
+                                                       (94.4% logic, 5.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_in = PERIOD TIMEGRP "clk_in" 40 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: dm/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: dm/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X2Y74.CLKA
+  Clock network: clk_in_BUFGP
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: dm/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: dm/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X5Y70.CLKA
+  Clock network: clk_in_BUFGP
+--------------------------------------------------------------------------------
+Slack: 36.430ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
+  Physical resource: dm/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: dm/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X2Y68.CLKA
+  Clock network: clk_in_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |   36.861|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 7486894382896 paths, 0 nets, and 31935 connections
+
+Design statistics:
+   Minimum period:  36.861ns{1}   (Maximum frequency:  27.129MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Dec 20 21:14:45 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4826 MB
+
+
+

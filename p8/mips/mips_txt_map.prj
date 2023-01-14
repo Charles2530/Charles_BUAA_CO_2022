@@ -1,0 +1,2 @@
+verilog work "netgen/map/fpga_top_map.v"
+verilog work "mips_tb.v"

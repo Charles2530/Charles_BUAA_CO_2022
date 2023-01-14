@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\coding_file\study\Lesson\co_lesson\lesson\p8\mips\fpga_top.ncd
+OUTFILE=D:\coding_file\study\Lesson\co_lesson\lesson\p8\mips\fpga_top.bit
+FAMILY=Spartan6
+PART=xc6slx100-2fgg676
+WORKINGDIR=D:\coding_file\study\Lesson\co_lesson\lesson\p8\mips
+LICENSE=ISE
+USER_INFO=__0_0_0

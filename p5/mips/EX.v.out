@@ -1,0 +1,143 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012251f8 .scope module, "EX" "EX" 2 2;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk"
+    .port_info 1 /INPUT 1 "reset"
+    .port_info 2 /INPUT 32 "E_ALUout"
+    .port_info 3 /INPUT 32 "E_V2"
+    .port_info 4 /INPUT 32 "E_A2"
+    .port_info 5 /INPUT 5 "E_A3"
+    .port_info 6 /INPUT 32 "E_PC"
+    .port_info 7 /INPUT 32 "E_PC8"
+    .port_info 8 /INPUT 2 "E_Tnew"
+    .port_info 9 /INPUT 1 "E_Wegrf"
+    .port_info 10 /INPUT 1 "E_WeDm"
+    .port_info 11 /INPUT 1 "E_SelEMout"
+    .port_info 12 /INPUT 1 "E_SelWout"
+    .port_info 13 /INPUT 3 "E_LSop"
+    .port_info 14 /OUTPUT 5 "M_ALUout"
+    .port_info 15 /OUTPUT 32 "M_V2"
+    .port_info 16 /OUTPUT 5 "M_A2"
+    .port_info 17 /OUTPUT 5 "M_A3"
+    .port_info 18 /OUTPUT 32 "M_PC"
+    .port_info 19 /OUTPUT 32 "M_PC8"
+    .port_info 20 /OUTPUT 2 "M_Tew"
+    .port_info 21 /OUTPUT 1 "M_Wegrf"
+    .port_info 22 /OUTPUT 1 "M_WeDm"
+    .port_info 23 /OUTPUT 1 "M_SelEMout"
+    .port_info 24 /OUTPUT 1 "M_SelWout"
+    .port_info 25 /OUTPUT 3 "M_LSop"
+o010d3fa4 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v012252c8_0 .net "E_A2", 31 0, o010d3fa4;  0 drivers
+o010d3fbc .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v0122cd30_0 .net "E_A3", 4 0, o010d3fbc;  0 drivers
+o010d3fd4 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0122cd88_0 .net "E_ALUout", 31 0, o010d3fd4;  0 drivers
+o010d3fec .functor BUFZ 3, C4<zzz>; HiZ drive
+v0122cde0_0 .net "E_LSop", 2 0, o010d3fec;  0 drivers
+o010d4004 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0122ce38_0 .net "E_PC", 31 0, o010d4004;  0 drivers
+o010d401c .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0122ce90_0 .net "E_PC8", 31 0, o010d401c;  0 drivers
+o010d4034 .functor BUFZ 1, C4<z>; HiZ drive
+v0122cee8_0 .net "E_SelEMout", 0 0, o010d4034;  0 drivers
+o010d404c .functor BUFZ 1, C4<z>; HiZ drive
+v0122cf40_0 .net "E_SelWout", 0 0, o010d404c;  0 drivers
+o010d4064 .functor BUFZ 2, C4<zz>; HiZ drive
+v010d18d0_0 .net "E_Tnew", 1 0, o010d4064;  0 drivers
+o010d407c .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v010d1928_0 .net "E_V2", 31 0, o010d407c;  0 drivers
+o010d4094 .functor BUFZ 1, C4<z>; HiZ drive
+v010d1980_0 .net "E_WeDm", 0 0, o010d4094;  0 drivers
+o010d40ac .functor BUFZ 1, C4<z>; HiZ drive
+v010d19d8_0 .net "E_Wegrf", 0 0, o010d40ac;  0 drivers
+v010d1a30_0 .var "M_A2", 4 0;
+v010d1a88_0 .var "M_A3", 4 0;
+v010d1ae0_0 .var "M_ALUout", 4 0;
+v010d1b38_0 .var "M_LSop", 2 0;
+v010f9af0_0 .var "M_PC", 31 0;
+v010f9938_0 .var "M_PC8", 31 0;
+v010f9570_0 .var "M_SelEMout", 0 0;
+v010f9410_0 .var "M_SelWout", 0 0;
+v010f96d0_0 .var "M_Tew", 1 0;
+v010f9990_0 .var "M_V2", 31 0;
+v010f9620_0 .var "M_WeDm", 0 0;
+v010f9468_0 .var "M_Wegrf", 0 0;
+o010d41e4 .functor BUFZ 1, C4<z>; HiZ drive
+v010f99e8_0 .net "clk", 0 0, o010d41e4;  0 drivers
+o010d41fc .functor BUFZ 1, C4<z>; HiZ drive
+v010f9728_0 .net "reset", 0 0, o010d41fc;  0 drivers
+E_0122e950 .event posedge, v010f99e8_0;
+    .scope S_012251f8;
+T_0 ;
+    %wait E_0122e950;
+    %load/vec4 v010f9728_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 5;
+    %assign/vec4 v010d1ae0_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v010f9990_0, 0;
+    %pushi/vec4 0, 0, 5;
+    %assign/vec4 v010d1a30_0, 0;
+    %pushi/vec4 0, 0, 5;
+    %assign/vec4 v010d1a88_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v010f9af0_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v010f9938_0, 0;
+    %pushi/vec4 0, 0, 2;
+    %assign/vec4 v010f96d0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v010f9468_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v010f9620_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v010f9570_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v010f9410_0, 0;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v010d1b38_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0122cd88_0;
+    %pad/u 5;
+    %assign/vec4 v010d1ae0_0, 0;
+    %load/vec4 v010d1928_0;
+    %assign/vec4 v010f9990_0, 0;
+    %load/vec4 v012252c8_0;
+    %pad/u 5;
+    %assign/vec4 v010d1a30_0, 0;
+    %load/vec4 v0122cd30_0;
+    %assign/vec4 v010d1a88_0, 0;
+    %load/vec4 v0122ce38_0;
+    %assign/vec4 v010f9af0_0, 0;
+    %load/vec4 v0122ce90_0;
+    %assign/vec4 v010f9938_0, 0;
+    %load/vec4 v010d18d0_0;
+    %assign/vec4 v010f96d0_0, 0;
+    %load/vec4 v010d19d8_0;
+    %assign/vec4 v010f9468_0, 0;
+    %load/vec4 v010d1980_0;
+    %assign/vec4 v010f9620_0, 0;
+    %load/vec4 v0122cee8_0;
+    %assign/vec4 v010f9570_0, 0;
+    %load/vec4 v0122cf40_0;
+    %assign/vec4 v010f9410_0, 0;
+    %load/vec4 v0122cde0_0;
+    %assign/vec4 v010d1b38_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "EX.v";

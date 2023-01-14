@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ALU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ALU.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ALU.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ALU_change.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ALU_change.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ALU_change.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/Controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/Controller.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/Controller.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/DM_change.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/DM_change.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/DM_change.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/DM_output.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/DM_output.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/DM_output.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/EX.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/EX.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/EX.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/EXT.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/EXT.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/EXT.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/GRF.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/HazardUnit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/HazardUnit.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/HazardUnit.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ID.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ID.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/ID.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/IF.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/IF.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/IF.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/MD_Unit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/MD_Unit.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/MD_Unit.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/MEM.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/MEM.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/MEM.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/NPC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/NPC.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/NPC.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/PC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/PC.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/PC.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/mips.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/mips.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/macro.v&apos; in file &quot;D:/coding_file/study/Lesson/co_lesson/lesson/p6/mips/mips.v&quot; line 2
+</arg>
+</msg>
+
+</messages>
+

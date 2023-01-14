@@ -1,0 +1,25 @@
+[Inputs]
+clk
+reset
+interrupt
+inter_T0
+inter_T1
+=i_inst_rdata[31:0]=
+=Rdata[31:0]=
+[Outputs]
+w_grf_we
+=macroscopic_pc[31:0]=
+=i_inst_addr[31:0]=
+=m_data_addr[31:0]=
+=m_data_wdata[31:0]=
+=Byteen[3:0]=
+=m_int_addr[31:0]=
+=m_int_byteen[3:0]=
+=m_inst_addr[31:0]=
+=w_grf_addr[4:0]=
+=w_grf_wdata[31:0]=
+=w_inst_addr[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel cpu
+

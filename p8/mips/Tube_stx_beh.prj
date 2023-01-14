@@ -1,0 +1,3 @@
+verilog isim_temp "src/Monitor.v"
+verilog isim_temp "src/Tube.v"
+verilog isim_temp "D:/SoftWare/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

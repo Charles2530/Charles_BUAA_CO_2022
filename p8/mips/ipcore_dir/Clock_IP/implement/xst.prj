@@ -1,0 +1,2 @@
+verilog work ../../Clock_IP.v
+verilog work ../example_design/Clock_IP_exdes.v

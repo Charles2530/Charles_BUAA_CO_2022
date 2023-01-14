@@ -1,0 +1,54 @@
+Running: D:\SoftWare\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/mips_tb_isim_beh.exe -prj D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/mips_tb_beh.prj mips_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/IM.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/DM_output.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/DM_change.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/PC.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/NPC.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/MEM.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/MD_Unit.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/IF.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/ID.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/HazardUnit.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/GRF.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/EXT.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/EX.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/DM.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/Controller.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/ALU_change.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/ALU.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/mips.v" into library work
+Analyzing Verilog file "D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/mips_tb.v" into library work
+Analyzing Verilog file "D:/SoftWare/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module HazardUnit
+Compiling module IM
+Compiling module PC
+Compiling module IF
+Compiling module GRF
+Compiling module EXT
+Compiling module NPC
+Compiling module B_transfer
+Compiling module Controller
+Compiling module ID
+Compiling module ALU
+Compiling module MD_Unit
+Compiling module EX
+Compiling module DM_In
+Compiling module DM_Out
+Compiling module DM
+Compiling module MEM
+Compiling module mips
+Compiling module mips_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: 系统找不到指定的路径。, "isim\mips_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 20 Verilog Units
+Built simulation executable D:/coding_file/study/Lesson/co_lesson/lesson/p5/mips/mips_tb_isim_beh.exe
+Fuse Memory Usage: 39004 KB
+Fuse CPU Usage: 921 ms

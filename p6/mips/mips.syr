@@ -1,0 +1,246 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xc6slx100-2-fgg676
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\IM.v" into library work
+Parsing module <IM>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" into library work
+Parsing module <DM_Out>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_change.v" into library work
+Parsing module <DM_In>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\PC.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <PC>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\NPC.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <NPC>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\MEM.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <MEM>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\MD_Unit.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <MD_Unit>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\IF.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <IF>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\ID.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <ID>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\HazardUnit.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <HazardUnit>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\GRF.v" into library work
+Parsing module <GRF>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\EXT.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <EXT>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\EX.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <EX>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <DM>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\Controller.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <Controller>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\ALU_change.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <B_transfer>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\ALU.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <ALU>.
+Analyzing Verilog file "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" into library work
+Parsing verilog file "macro.v" included at line 2.
+Parsing module <mips>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mips>.
+
+Elaborating module <HazardUnit>.
+
+Elaborating module <MD_Unit>.
+WARNING:HDLCompiler:1499 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\MD_Unit.v" Line 3: Empty module <MD_Unit> remains a black box.
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 158: Assignment to HI ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 159: Assignment to LO ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 160: Assignment to mdu_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 161: Assignment to busy ignored, since the identifier is never used
+
+Elaborating module <PC>.
+
+Elaborating module <IM>.
+Reading initialization file \"p5_middle_2.txt\".
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+ERROR:HDLCompiler:487 - "Unknown" Line 0: Illegal hexadecimal number
+Sorry, too many errors..
+WARNING:HDLCompiler:1499 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\IM.v" Line 2: Empty module <IM> remains a black box.
+
+Elaborating module <IF>.
+
+Elaborating module <GRF>.
+"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\GRF.v" Line 34. $display  32'b................................ 5'b..... 32'b................................
+
+Elaborating module <EXT>.
+
+Elaborating module <NPC>.
+
+Elaborating module <B_transfer>.
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\ALU_change.v" Line 11: Assignment to more ignored, since the identifier is never used
+
+Elaborating module <Controller>.
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\Controller.v" Line 121: Assignment to b_type ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\Controller.v" Line 122: Assignment to j_type ignored, since the identifier is never used
+
+Elaborating module <ID>.
+WARNING:HDLCompiler:413 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\ID.v" Line 89: Result of 32-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <ALU>.
+
+Elaborating module <EX>.
+WARNING:HDLCompiler:413 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\EX.v" Line 66: Result of 32-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <DM>.
+"D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM.v" Line 32. $display  32'b................................ 32'b................................ 32'b................................
+
+Elaborating module <DM_In>.
+
+Elaborating module <DM_Out>.
+WARNING:HDLCompiler:413 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 7: Result of 8-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 8: Result of 8-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 9: Result of 8-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\DM_output.v" Line 10: Result of 8-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <MEM>.
+WARNING:HDLCompiler:413 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\MEM.v" Line 54: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 420: Assignment to w_RegDst ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "D:\coding_file\study\Lesson\co_lesson\lesson\p5\mips\mips.v" Line 150: Net <mdu_en> does not have a driver.
+--> 
+
+Total memory usage is 5983576 kilobytes
+
+Number of errors   :   19 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

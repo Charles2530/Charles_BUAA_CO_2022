@@ -1,0 +1,50 @@
+$date
+	Sat Sep 24 21:56:29 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_vote $end
+$var wire 1 ! res $end
+$var reg 32 " np [31:0] $end
+$var reg 8 # vip [7:0] $end
+$var reg 1 $ vvip $end
+$scope module u_vote $end
+$var wire 32 % np [31:0] $end
+$var wire 8 & vip [7:0] $end
+$var wire 1 $ vvip $end
+$var wire 1 ! res $end
+$var reg 8 ' cnt [7:0] $end
+$var integer 32 ( i [31:0] $end
+$var integer 32 ) j [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1000 )
+b100000 (
+b100010 '
+b111 &
+b111111 %
+1$
+b111 #
+b111111 "
+1!
+$end
+#5000
+b1000 )
+b100000 (
+0!
+b11010 '
+b10 #
+b10 &
+#10000
+b1000 )
+b100000 (
+b1010 '
+0$
+#15000

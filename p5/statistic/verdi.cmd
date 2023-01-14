@@ -1,0 +1,1 @@
+java -jar mars.jar test.asm db mc CompactDataAtZero col1 nc >mips_out.txt
